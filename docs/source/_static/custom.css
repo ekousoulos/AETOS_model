@@ -1,0 +1,22 @@
+/* Top logo/search area (white) */
+.wy-side-nav-search {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Sidebar menu background (dark grey) */
+.wy-nav-side {
+    background-color: #01273a !important; /* dark grey */
+}
+
+/* Menu links (light text on dark) */
+.wy-menu-vertical a {
+    color: #eeeeee !important;
+}
+
+/* Hover/active link (lighter grey highlight) */
+.wy-menu-vertical a:hover,
+.wy-menu-vertical a.current {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
