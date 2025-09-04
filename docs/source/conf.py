@@ -36,7 +36,11 @@ html_logo = "_static/logo.png"
 
 # Custom static files (CSS overrides etc.)
 html_static_path = ["_static"]
-html_css_files = ["custom.css",]
+html_css_files = [
+    "custom.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css",
+]
+
 
 # If you want to add custom CSS (optional, e.g., to tweak fonts/spacing)
 # Place a custom.css in docs/source/_static/ and uncomment:

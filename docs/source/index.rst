@@ -40,7 +40,7 @@ The following sections describe the structure, datasets, and scenarios of AETOS:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sections
+   :caption: Sections:
 
    model-structure
    datasets

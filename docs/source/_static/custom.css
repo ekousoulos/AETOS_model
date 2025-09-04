@@ -6,7 +6,7 @@
 
 /* Sidebar menu background (dark grey) */
 .wy-nav-side {
-    background-color: #01273a !important; /* dark grey */
+    background-color: #01273a !important; /* darK blue */
 }
 
 /* Menu links (light text on dark) */
@@ -27,7 +27,49 @@
 
 /* Adjust logo size and spacing */
 .wy-side-nav-search img {
-    max-height: 50px;   /* shrink if logo is tall */
     margin-bottom: 5px; /* reduce bottom gap */
 }
+.wy-side-nav-search {
+    background-color: #ffffff !important; /* keep white background */
+    color: #01273a !important;            /* force black text */
+}
+
+.wy-side-nav-search > div,
+.wy-side-nav-search a {
+    color: #01273a !important;            /* links also black */
+}
+/* Add icon before Model Structure */
+.wy-menu-vertical a[href$="model-structure.html"]::before {
+    content: "\f1b2"; /* Font Awesome cube icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Datasets */
+.wy-menu-vertical a[href$="datasets.html"]::before {
+    content: "\f1c0"; /* database icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Scenarios */
+.wy-menu-vertical a[href$="scenarios.html"]::before {
+    content: "\f080"; /* chart bar icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Handbook */
+.wy-menu-vertical a[href$="handbook.html"]::before {
+    content: "\f02d"; /* book icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+
+
 
