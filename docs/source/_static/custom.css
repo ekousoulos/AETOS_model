@@ -20,3 +20,14 @@
     background-color: #444444 !important;
     color: #ffffff !important;
 }
+/* Reduce padding in the logo/search area */
+.wy-side-nav-search {
+    padding: 10px 10px !important;   /* default is ~30px */
+}
+
+/* Adjust logo size and spacing */
+.wy-side-nav-search img {
+    max-height: 50px;   /* shrink if logo is tall */
+    margin-bottom: 5px; /* reduce bottom gap */
+}
+
