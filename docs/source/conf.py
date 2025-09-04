@@ -11,20 +11,34 @@ copyright = '2025, Elias Kousoulos-Kovachian'
 author = 'Elias Kousoulos-Kovachian'
 release = 'v1.0'
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+ #-- General configuration -
 
-extensions = ["myst_parser"]
-html_theme = "sphinx_rtd_theme"
+extensions = [
+    "myst_parser",          # Allow Markdown files
+]
 
-
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
-
-
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+html_theme = "sphinx_rtd_theme"
+
+# Theme options to get the wide sidebar + full navigation like RTD
+html_theme_options = {
+    "collapse_navigation": False,   # keep menu expanded
+    "navigation_depth": 4,          # show nested headings
+    "titles_only": False,           # include page titles in sidebar
+}
+
+# Add logo (place your logo at docs/source/_static/logo.png)
+html_logo = "_static/logo.png"
+
+# Custom static files (CSS overrides etc.)
+html_static_path = ["_static"]
+
+# If you want to add custom CSS (optional, e.g., to tweak fonts/spacing)
+# Place a custom.css in docs/source/_static/ and uncomment:
+# html_css_files = [
+#     "custom.css",
+# ]
