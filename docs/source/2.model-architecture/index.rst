@@ -267,7 +267,7 @@ Interconnection Structure
 - Cross-border trade within Africa and within Europe.  
 - Distance-based cost tiers for new infrastructure.  
 
-.. image:: /_static/interconnector.svg
+.. image:: /_static/Interconnector.svg
    :alt: Interconnection diagram
    :align: center
    :width: 90%
@@ -285,7 +285,7 @@ Storage Structure
   and seasonal (hydrogen, hydro reservoirs) storage.  
 - Allows analysis of flexibility requirements under high RES penetration.  
 
-.. image:: /_static/Storage.svg
+.. image:: /_static/storage.svg
    :alt: Storage diagram
    :align: center
    :width: 75%
