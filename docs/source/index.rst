@@ -1,6 +1,5 @@
-======================
 AETOS Documentation
-======================
+===================
 
 This is the documentation for the **AETOS (Africa–Europe Energy Transition OSeMOSYS)** model, 
 developed under the RE-INTEGRATE project (Horizon Europe, Grant No. 101118217).
@@ -12,37 +11,19 @@ developed under the RE-INTEGRATE project (Horizon Europe, Grant No. 101118217).
    and extensions by the modelling community.
 
 
-Quickstart
-==========
-
-1. Install requirements from ``docs/requirements.txt``:
-
-   .. code-block:: bash
-
-      pip install -r docs/requirements.txt
-
-2. Build documentation locally:
-
-   .. code-block:: bash
-
-      cd docs
-      make html
-
-3. Open the documentation in a browser at:
-
-   ``docs/build/html/index.html``
-
-
 Contents
 ========
 
-The following sections describe the structure, datasets, and scenarios of AETOS:
-
 .. toctree::
    :maxdepth: 2
-   :caption: Sections:
+   :caption: Sections
+   :titlesonly:
 
-   model-structure
-   datasets
-   scenarios
-   handbook
+   1.introduction/index
+   2.model-architecture/index
+   3.datasets/index
+   4.installation-setup/index
+   5.running-model/index
+   6.result-visualisation/index
+   7.scenarios/index
+   8.troubleshooting-faq/index

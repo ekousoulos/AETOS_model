@@ -14,12 +14,40 @@
     color: #eeeeee !important;
 }
 
-/* Hover/active link (lighter grey highlight) */
-.wy-menu-vertical a:hover,
-.wy-menu-vertical a.current {
+/* Hover state */
+.wy-menu-vertical a:hover {
     background-color: #444444 !important;
     color: #ffffff !important;
 }
+
+/* Active (clicked/current) state */
+.wy-menu-vertical a.current {
+    background-color: #ffffff !important;  /* white background */
+    color: #01273a !important;            /* dark blue text */
+    font-weight: bold;                    /* optional: highlight */
+}
+
+/* Submenu links inside the active (open) section */
+.wy-menu-vertical li.current > ul li a {
+    background-color: #ffffff !important; /* white background */
+    color: #000000 !important;            /* black text */
+}
+
+/* Hover state for submenu */
+.wy-menu-vertical li.current > ul li a:hover {
+    background-color: #e6e6e6 !important; /* light grey hover */
+    color: #000000 !important;
+}
+
+/* Exact active page link */
+.wy-menu-vertical li.current > ul li a.current {
+    background-color: #01273a !important; /* dark blue background */
+    color: #ffffff !important;            /* white text */
+    font-weight: bold;                    /* highlight */
+}
+
+
+
 /* Reduce padding in the logo/search area */
 .wy-side-nav-search {
     padding: 10px 10px !important;   /* default is ~30px */
@@ -38,38 +66,273 @@
 .wy-side-nav-search a {
     color: #01273a !important;            /* links also black */
 }
-/* Add icon before Model Structure */
-.wy-menu-vertical a[href$="model-structure.html"]::before {
-    content: "\f1b2"; /* Font Awesome cube icon */
+
+
+/* Add icon before Introduction */
+.wy-menu-vertical a[href$="introduction/index.html"]::before {
+    content: "\f129"; /* info-circle */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Model Architecture */
+.wy-menu-vertical a[href$="model-architecture/index.html"]::before {
+    content: "\f1b2"; /* cube */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-right: 6px;
 }
 
 /* Add icon before Datasets */
-.wy-menu-vertical a[href$="datasets.html"]::before {
-    content: "\f1c0"; /* database icon */
+.wy-menu-vertical a[href$="datasets/index.html"]::before {
+    content: "\f1c0"; /* database */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Installation & Setup */
+.wy-menu-vertical a[href$="installation-setup/index.html"]::before {
+    content: "\f085"; /* cogs */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Running the Model */
+.wy-menu-vertical a[href$="running-model/index.html"]::before {
+    content: "\f04b"; /* play */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+/* Add icon before Result Visualisation */
+.wy-menu-vertical a[href$="result-visualisation/index.html"]::before {
+    content: "\f201"; /* line-chart */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-right: 6px;
 }
 
 /* Add icon before Scenarios */
-.wy-menu-vertical a[href$="scenarios.html"]::before {
-    content: "\f080"; /* chart bar icon */
+.wy-menu-vertical a[href$="scenarios/index.html"]::before {
+    content: "\f080"; /* bar-chart */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-right: 6px;
 }
 
-/* Add icon before Handbook */
-.wy-menu-vertical a[href$="handbook.html"]::before {
-    content: "\f02d"; /* book icon */
+/* Add icon before Troubleshooting & FAQ */
+.wy-menu-vertical a[href$="troubleshooting-faq/index.html"]::before {
+    content: "\f059"; /* question-circle */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-right: 6px;
 }
 
+/* Menu Icons top*/
+
+.title-icons {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* vertical align */
+  gap: 12px;                 /* equal spacing */
+  margin: 8px 0;
+}
+
+.title-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;               /* uniform size */
+  height: 24px;
+  font-size: 18px;
+  color: #01273a;
+  text-decoration: none;
+}
+
+.title-icons a:hover {
+  color: #444444;
+}
+
+.zenodo-text-icon {
+  width: 100%;
+  height: 100%;
+  background-color: #1684d3; /* Zenodo blue */
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 16px;           /* 🔥 bigger letters */
+  border-radius: 4px;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
 
 
 
+/* Target captions in RTD theme */
+.rst-content div.figure p.caption {
+    text-align: left !important;     /* left align text */
+    font-size: 0.85em !important;    /* smaller font size */
+    color: #555 !important;          /* softer grey */
+    font-style: italic;              /* optional */
+    margin-top: 0.2em;               /* tighten spacing */
+}
+
+.rst-content p.mycaption {
+    text-align: left;       /* caption left */
+    font-size: 0.8em;       /* smaller */
+    color: #555;            /* softer grey */
+    font-style: italic;     /* optional */
+    margin-top: 0.2em;      /* spacing from image */
+    max-width: 80%;         /* match image width */
+    margin-left: auto;      /* center the block horizontally */
+    margin-right: auto;
+}
+/* Remove background and borders only from the RES table */
+.res-table td, 
+.res-table th {
+    background-color: transparent !important;
+    border: none !important;
+}
+.res-table {
+    border: none !important;
+}
+/* Reduce space after RES list-table */
+.res-table {
+    margin-bottom: 0.5em !important;  /* tighten spacing under the table */
+}
+
+/* Cleaner tables for datasets */
+.source-table td, .source-table th {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0.4em 0.6em;
+}
+.source-table th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc !important;
+}
+
+/* Flexbox grid for data logos */
+.data-logos {
+    display: flex;
+    flex-wrap: wrap;               /* ✅ allow multiple rows */
+    justify-content: space-evenly; /* equal spacing across each row */
+    align-items: center;
+    gap: 20px 40px;                /* row-gap, col-gap */
+    margin: 1.5em 0;
+}
+
+.data-logos img {
+    max-height: 80px;
+    object-fit: contain;
+    flex: 0 1 120px;               /* force each logo into a ~120px slot */
+}
+
+
+
+
+/* Clean appendix tables */
+.appendix-table td, .appendix-table th {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0.4em 0.6em;
+    vertical-align: top;
+}
+.appendix-table th {
+    font-weight: bold;
+    border-bottom: 2px solid #ccc !important;
+}
+
+/* Make all h1 (----- underlines in RST) blue */
+h1 {
+    color: #02283d;
+}
+/* Make all h2 (----- underlines in RST) blue */
+h2 {
+    color: #02283d;
+}
+
+/* Optional: make h3 (^^^^^ underlines) blue too */
+h3 {
+    color: #02283d;
+}
+
+/* Code blocks background (lighter dark) */
+div.highlight pre {
+    background-color: #323232;  /* slightly lighter than #2b2b2b */
+    color: #f8f8f2;             /* default text in light gray */
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+/* Inline code styling (``like_this``) */
+code {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+
+
+/* Code them */
+/* Code blocks background (medium gray) */
+div.highlight pre {
+    background-color: #444444;  /* medium gray */
+    color: #f8f8f2;             /* default light text */
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+/* Inline code styling (``like_this``) */
+code {
+    background-color: #555555;  /* slightly lighter gray */
+    color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Comments (#) in bright green */
+div.highlight .c,
+div.highlight .c1,
+div.highlight .cm {
+    color: #84c383;
+    /* bright green */
+    font-style: italic;
+}
+
+
+/* Remove outlines/borders around code blocks */
+div.highlight {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Hug text and code blocks closer together */
+p + div.highlight {
+    margin-top: 0.1em !important;   /* minimal space above code */
+}
+
+div.highlight + p {
+    margin-top: 0.1em !important;   /* minimal space below code */
+}
+
+/* Remove outer background/outline on code blocks */
+div.highlight,
+div[class^="highlight-"] {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}

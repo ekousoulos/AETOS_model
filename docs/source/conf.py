@@ -14,7 +14,7 @@ release = 'v1.0'
  #-- General configuration -
 
 extensions = [
-    "myst_parser",          # Allow Markdown files
+    "myst_parser","sphinx_design","sphinx_copybutton"          # Allow Markdown files
 ]
 
 templates_path = ["_templates"]
@@ -39,6 +39,15 @@ html_static_path = ["_static"]
 html_css_files = [
     "custom.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css",
+]
+
+# Syntax highlighting style
+pygments_style = "default"          # for light theme
+pygments_dark_style = "default"     # for dark theme
+
+
+myst_enable_extensions = [
+    "colon_fence",   # required for sphinx-design blocks
 ]
 
 

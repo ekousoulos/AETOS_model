@@ -1,0 +1,33 @@
+{% extends "!layout.html" %}
+
+{% block sidebartitle %}
+  <div class="wy-side-nav-search">
+    {# Home + project name (top link) #}
+    <a href="{{ pathto(master_doc) }}" class="icon icon-home"> {{ project }} </a>
+
+    {# Icons row (GitHub, Zenodo text-box, PDF) #}
+    <div class="title-icons">
+      <a href="https://github.com/ekousoulos/AETOS_model" title="GitHub" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://zenodo.org/records/17007181" title="Zenodo Repository" target="_blank">
+        <span class="zenodo-text-icon">ze</span>
+      </a>
+
+      <a href="_downloads/AETOS_model.pdf" title="Download PDF" target="_blank">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+
+    {# Proper logo rendering (RTD uses logo_url) #}
+    {% if logo_url %}
+      <a href="{{ pathto(master_doc) }}">
+        <img src="{{ logo_url }}" class="logo" alt="{{ project }}" />
+      </a>
+    {% endif %}
+
+    {# Search bar #}
+    {% include "searchbox.html" %}
+  </div>
+{% endblock %}
