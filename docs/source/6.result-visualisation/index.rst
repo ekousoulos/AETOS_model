@@ -4,19 +4,17 @@ Visualisation
 Visualization & Plotting
 ------------------------
 
-The repository includes plotting scripts for key outputs (capacity, generation, trade, emissions).  
+The repository includes dedicated plotting scripts for analysing key outputs, such as **installed capacity** and **generation activity**.  
+Run them by passing the results file and scenario tag as arguments. 
 
-Use the provided Python scripts to generate plots from the results CSV.  
 Replace :bdg-primary:`<RESULTS_FILE>` with the name of your results file (e.g. :bdg-success:`20250912_UNNZv1.csv`),  
-and :bdg-primary:`<TAG>` with the scenario tag (e.g. :bdg-success:`UNNZ`).
-
+and :bdg-primary:`<TAG>` with the scenario tag (e.g. :bdg-success:`UNNZ`):
 
 .. code-block:: bash
 
-   #Visualising Total Capacity Normalised
    python scripts/totalcapnorm.py results/<RESULTS_FILE> <TAG>
-   
-   #Visualising Total Activity Normalised
+
    python scripts/totalactnorm.py results/<RESULTS_FILE> <TAG>
 
-
+The first script produces **normalised capacity plots**, while the second produces **normalised activity plots**.  
+Figures are saved automatically into the ``visualisation`` folder.  

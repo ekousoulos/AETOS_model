@@ -1,5 +1,7 @@
 Installation & Setup
 ====================
+Setup Steps
+------------
 
 Setting up the **AETOS** model is straightforward.  
 Follow the four steps below to get started:
@@ -8,12 +10,11 @@ Follow the four steps below to get started:
    :local:
    :depth: 1
 
-.. tip::
+.. warning::
    Make sure you have `Python <https://www.python.org/>`_ and  
    `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_ installed beforehand.
 
-Step 1 – Clone the Repository
------------------------------
+**Step 1 – Clone the Repository**
 
 Clone the repository, which contains everything from data editing to running and visualisation:
 
@@ -22,33 +23,38 @@ Clone the repository, which contains everything from data editing to running and
    git clone https://github.com/ekousoulos/AETOS_model.git
    cd AETOS_model
 
-Step 2 – Create a Python Environment
-------------------------------------
+**Step 2 – Create a Python Environment**
 
 Use **Miniconda** (or Anaconda) to create a clean Python environment for running the provided scripts:
 
-.. code-block:: bash
+.. code-block:: none
 
    conda create -n aetos python=3.11
    conda activate aetos
 
-Step 3 – Install a Solver
--------------------------
+**Step 3 – Install a Solver**
 
-You will need a solver to process the model:
+You need GLPK to generate the LP file, and a high-performance solver (CPLEX or Gurobi) to solve it efficiently:
 
-- `GLPK <https://www.gnu.org/software/glpk/>`_ (open-source, recommended for LP file creation)  
+- `GLPK <https://www.gnu.org/software/glpk/>`_ (open-source, **mandatory** for LP file creation)  
 - `CPLEX <https://www.ibm.com/products/ilog-cplex-optimization-studio>`_ (fast & robust, academic license available)  
 - `Gurobi <https://www.gurobi.com/>`_ (powerful commercial solver, free academic license)  
+- `CBC <https://github.com/coin-or/Cbc>`_ (open-source, decent performance for medium models)  
+- `HiGHS <https://highs.dev/>`_ (very fast open-source solver, promising alternative for LP/MIP)  
 
 Example installation for GLPK (Linux/Mac):
 
 .. code-block:: bash
 
    conda install -c conda-forge glpk
+   
+Example installation for CPLEX (Linux/Mac/Windows):
 
-Step 4 – Install Otoole
------------------------
+.. code-block:: bash
+
+   conda install -c ibmdecisionoptimization cplex
+
+**Step 4 – Install Otoole**
 
 `Otoole <https://otoole.readthedocs.io/>`_ is the main utility for handling OSeMOSYS input/output.  
 
@@ -56,13 +62,11 @@ Step 4 – Install Otoole
 
    pip install otoole
 
-.. important::
-   Otoole is required for converting, validating, and reporting model input/output files.
 
 Additional Packages for Visualisation
 -------------------------------------
 
-For plotting and analysis, you will also need:
+For plotting and analysis, you will also need **pandas**, **numpy** and  **matplotlib** withing your **aetos** Pyhon environment:
 
 .. code-block:: bash
 

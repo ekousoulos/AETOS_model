@@ -16,8 +16,8 @@
 
 /* Hover state */
 .wy-menu-vertical a:hover {
-    background-color: #444444 !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #01273a !important;
 }
 
 /* Active (clicked/current) state */
@@ -27,25 +27,30 @@
     font-weight: bold;                    /* optional: highlight */
 }
 
+/* Keep active item consistent when hovering elsewhere */
+.wy-menu-vertical li.current > a {
+    background-color: #ffffff !important;
+    color: #01273a !important;
+}
+
 /* Submenu links inside the active (open) section */
 .wy-menu-vertical li.current > ul li a {
-    background-color: #ffffff !important; /* white background */
-    color: #000000 !important;            /* black text */
+    background-color: transparent !important; /* no background */
+    color: #eeeeee !important;                /* light text by default */
 }
 
 /* Hover state for submenu */
 .wy-menu-vertical li.current > ul li a:hover {
-    background-color: #e6e6e6 !important; /* light grey hover */
-    color: #000000 !important;
+    background-color: #ffffff !important; /* white background */
+    color: #01273a !important;            /* blue text */
 }
 
-/* Exact active page link */
+/* Active submenu page link */
 .wy-menu-vertical li.current > ul li a.current {
-    background-color: #01273a !important; /* dark blue background */
-    color: #ffffff !important;            /* white text */
-    font-weight: bold;                    /* highlight */
+    background-color: #ffffff !important; /* white background */
+    color: #01273a !important;            /* dark blue text */
+    font-weight: bold;
 }
-
 
 
 /* Reduce padding in the logo/search area */
@@ -335,4 +340,33 @@ div[class^="highlight-"] {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
+}
+
+/* --- Force submenu look to match main menu --- */
+
+/* Submenu default state (when section is open) */
+.wy-menu-vertical li.current > ul li.toctree-l2 > a,
+.wy-menu-vertical li.current > ul li.toctree-l3 > a {
+    background: #03476b !important;  /* dark blue background */
+    color: #ffffff !important;       /* white text */
+}
+
+/* Submenu hover */
+.wy-menu-vertical li.current > ul li.toctree-l2 > a:hover,
+.wy-menu-vertical li.current > ul li.toctree-l3 > a:hover {
+    background: #ffffff !important;
+    color: #01273a !important;
+}
+
+/* Submenu active (selected) */
+.wy-menu-vertical li.current > ul li.toctree-l2 > a.current,
+.wy-menu-vertical li.current > ul li.toctree-l3 > a.current {
+    background: #ffffff !important;
+    color: #01273a !important;
+    font-weight: bold;
+}
+
+/* Remove the default admonition icons */
+.admonition > .admonition-title::before {
+    content: none !important;
 }

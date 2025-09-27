@@ -17,7 +17,6 @@ Contents
 .. toctree::
    :maxdepth: 2
    :caption: Sections
-   :titlesonly:
 
    1.introduction/index
    2.model-architecture/index

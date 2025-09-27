@@ -7,14 +7,14 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'AETOS_model'
-copyright = '2025, Elias Kousoulos-Kovachian'
+copyright = '2025, Elias Kousoulos-Kovachian, The Cyprus Institute'
 author = 'Elias Kousoulos-Kovachian'
 release = 'v1.0'
 
  #-- General configuration -
 
 extensions = [
-    "myst_parser","sphinx_design","sphinx_copybutton"          # Allow Markdown files
+    "myst_parser","sphinx_design","sphinx_copybutton",          # Allow Markdown files
 ]
 
 templates_path = ["_templates"]
