@@ -65,12 +65,12 @@ FAQ
 .. dropdown:: How do I run a quick test?
    :icon: question
 
-   Run with fewer years, or a smaller temporal resolution to ensure everything works before attempting the full model.  
+   Run with smaller horizon outlook, or a smaller temporal resolution to ensure everything works before attempting the full model.  
 
 .. dropdown:: My model run is too slow, what can I do?
    :icon: question
 
-   Try switching solver (GLPK → CPLEX), reduce temporal resolution, or run on HPC with more memory.  
+   Try switching solvers, reduce the horizon outlook, or run on HPC with more memory.  
 
 .. dropdown:: Can I contribute improvements?
    :icon: question
