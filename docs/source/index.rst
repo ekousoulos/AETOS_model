@@ -6,8 +6,6 @@
            loading="lazy"></iframe>
    <div style="height:24px"></div>
 
-Welcome to AETOS Documentation
-==============================
 
 .. important::
 
@@ -61,3 +59,16 @@ If you use AETOS in your work, please cite:
    The Africa–Europe Energy Transition OSeMOSYS (AETOS) Model: 
    A Multi-Country Framework for Cross-Continental Energy Trade.  
    Zenodo. DOI: https://zenodo.org/records/17007181
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   1.introduction/index
+   2.model-architecture/index
+   3.datasets/index
+   4.installation-setup/index
+   5.running-model/index
+   6.result-visualisation/index
+   7.scenarios/index
+   8.troubleshooting-faq/index

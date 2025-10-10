@@ -1,5 +1,12 @@
-Welcome to AETOS Documentation
-==============================
+.. title:: Welcome to AETOS Documentation
+
+.. raw:: html
+
+   <iframe src="_static/aetos_banner.html"
+           width="100%" height="150"
+           style="border:none; display:block; margin:0 auto;"
+           loading="lazy"></iframe>
+   <div style="height:24px"></div>
 
 .. important::
 
@@ -9,6 +16,7 @@ Welcome to AETOS Documentation
 
 Overview
 --------
+
 
 This is the documentation for the **AETOS (Africa–Europe Energy Transition OSeMOSYS)** model, 
 developed under the RE-INTEGRATE project (Horizon Europe, Grant No. 101118217).
