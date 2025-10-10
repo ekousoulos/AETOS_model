@@ -7,20 +7,18 @@
    <div style="height:24px"></div>
 
 
-.. important::
+.. note::
+   Open and evolving — supporting transparency, reproducibility,  
+   and collaboration in energy system modelling.
 
-   This documentation is under active development. 
-   All content is openly available to support transparency, reproducibility, 
-   and extensions by the modelling community.
-
-This is the documentation for the **AETOS (Africa–Europe Energy Transition OSeMOSYS)** model, 
-developed under the RE-INTEGRATE project (Horizon Europe, Grant No. 101118217).
+To learn more, start with the :doc:`1.introduction/index`.
 
 Contents
 ========
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    1.introduction/index
    2.model-architecture/index
